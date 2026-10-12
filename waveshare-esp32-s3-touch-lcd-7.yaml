@@ -121,6 +121,7 @@ display:
       red:
         - 1         #r3
         - 2         #r4
+          ignore_strapping_warning: true # <-- Prevents ESPHome platform conflict on GPIO 2
         - 42        #r5
         - 41        #r6
         - 40        #r7
@@ -133,6 +134,7 @@ display:
       green:
         - 39        #g2
         - 0         #g3
+          ignore_strapping_warning: true # <-- Prevents ESPHome platform conflict on GPIO 0
         - 45        #g4
         - 48        #g5
         - 47        #g6
