@@ -26,14 +26,16 @@ ch422g:
   - id: ch422g_hub
 
 output:
-  - platform: gpio
+  - platform: template
     id: lcdbacklight_output
-    pin:
-      ch422g: ch422g_hub
-      number: 2
-      mode:
-        output: true
-      inverted: false
+    type: binary
+    write_action:
+      - lambda: |-
+          if (state) {
+            id(ch422g_hub).digital_write(2, true);
+          } else {
+            id(ch422g_hub).digital_write(2, false);
+          }
 
 light:
   - platform: binary
