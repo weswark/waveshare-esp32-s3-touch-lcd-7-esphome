@@ -120,7 +120,7 @@ display:
     data_pins:
       red:
         - 1         #r3
-        - 2         #r4
+        - number: 2         #r4
           ignore_strapping_warning: true # <-- Prevents ESPHome platform conflict on GPIO 2
         - 42        #r5
         - 41        #r6
@@ -133,7 +133,7 @@ display:
         - 10        #b7
       green:
         - 39        #g2
-        - 0         #g3
+        - number: 0         #g3
           ignore_strapping_warning: true # <-- Prevents ESPHome platform conflict on GPIO 0
         - 45        #g4
         - 48        #g5
